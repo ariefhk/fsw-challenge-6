@@ -1,0 +1,63 @@
+:root {
+  --primary-color: rgba(13, 40, 166, 1);
+  --secondary-color: rgba(241, 243, 255, 1);
+  --btn-color: rgba(92, 184, 95, 1);
+  --btn-hover: rgba(61, 123, 63, 1);
+  --border-color: rgba(212, 212, 212, 1);
+}
+
+/* Navbar start*/
+
+.navbarToggle {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.navbarToggle:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 20px;
+  color: black;
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.navButton {
+  background-color: var(--btn-color);
+  border: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 20px;
+  border-radius: 2px;
+  padding: 8px 12px;
+}
+
+.navButton:hover {
+  background-color: var(--btn-hover);
+}
+
+@media (max-width: 575.98px) {
+  .nav {
+    display: none;
+  }
+}
+
+/* Navbar end*/
