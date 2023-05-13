@@ -6,6 +6,12 @@
   --border-color: rgba(212, 212, 212, 1);
 }
 
+/* header start */
+.header {
+  background-color: var(--secondary-color);
+}
+/* header end */
+
 /* Navbar start*/
 
 .navbarToggle {
@@ -54,6 +60,16 @@
   background-color: var(--btn-hover);
 }
 
+/* Navbar OnScroll start*/
+.navColored {
+  background-color: white;
+  border-bottom: 1px solid var(--border-color);
+}
+.navTransparent {
+  background-color: var(--secondary-color);
+}
+/* Navbar OnScroll end*/
+
 @media (max-width: 575.98px) {
   .nav {
     display: none;
@@ -61,3 +77,127 @@
 }
 
 /* Navbar end*/
+
+/* Hero star */
+.hero {
+  margin-top: 50px;
+  padding: 37px 20px 0px 20px;
+}
+
+.heroBtn {
+  background-color: var(--btn-color);
+  border: none;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 20px;
+  border-radius: 2px;
+}
+
+.heroBtn:hover {
+  background-color: var(--btn-hover);
+}
+
+.heroText h1 {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 54px;
+  color: black;
+}
+.heroText p {
+  margin: 16px 0px;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 20px;
+  color: black;
+}
+
+.heroImage {
+  width: 640px;
+  position: relative;
+  left: 6%;
+}
+
+.heroReset {
+  padding: 0;
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 32px 12px 0px 12px;
+  }
+
+  .heroImage {
+    margin-top: 24px;
+    overflow-x: hidden;
+    width: 100%;
+    z-index: 1;
+    padding-left: 4%;
+    position: static;
+  }
+}
+/* Hero end */
+
+/* service start */
+.service {
+  height: 100vh;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.serviceText h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 36px;
+}
+.serviceText p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 20px;
+  margin: 24px 0 18px 0;
+}
+
+.serviceText__link {
+  list-style: none;
+  padding: 0;
+}
+
+.serviceText__check {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 20px;
+}
+
+.serviceText__space {
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .service {
+    height: auto;
+    flex-direction: column;
+    margin: 60px -6px 0px -6px;
+  }
+
+  .serviceImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .serviceImageBox {
+    width: 80%;
+  }
+
+  .serviceText {
+    margin-top: 30px;
+  }
+  .serviceText p {
+    margin-top: 16px;
+  }
+}
+/* service end */

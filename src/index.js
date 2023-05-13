@@ -1,10 +1,14 @@
 import * as React from "react";
 import ReactDOM from "react-dom/client";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./utils/reset.css";
 import "./utils/global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+
+AOS.init();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
