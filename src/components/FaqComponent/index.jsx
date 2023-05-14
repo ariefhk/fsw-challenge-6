@@ -35,7 +35,7 @@ export default function FaqComponent() {
             <Accordion.Item eventKey="2" className={styles.faq__accord__reset}>
               <Accordion.Header className={styles.faq__accord__item}>
                 <h2 className={styles.faq__accord__item__text}>
-                  Berapa hari sebelumnya sebaiknya{" "}
+                  Berapa hari sebelumnya sebaiknya
                   <br className="d-block d-sm-none" /> booking sewa mobil?
                 </h2>
               </Accordion.Header>

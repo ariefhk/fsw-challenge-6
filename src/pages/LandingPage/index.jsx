@@ -7,6 +7,7 @@ import {
   WhyUs,
   Sewa,
   Faq,
+  Footer,
 } from "../../components";
 
 export default function LandingPage() {
@@ -23,6 +24,9 @@ export default function LandingPage() {
         <Sewa />
         <Faq />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

@@ -5,5 +5,6 @@ import Sewa from "./SewaComponent";
 import Testimonial from "./TestimonialComponent";
 import WhyUs from "./WhyUsComponent";
 import Faq from "./FaqComponent";
+import Footer from "./FooterComponent";
 
-export { Navbar, Hero, Service, Sewa, Testimonial, WhyUs, Faq };
+export { Navbar, Hero, Service, Sewa, Testimonial, WhyUs, Faq, Footer };
