@@ -1,18 +1,18 @@
 import React from "react";
 import { Row, Col, Container, Image, Button } from "react-bootstrap";
-import styles from './index.module.css'
+import styles from "./index.module.css";
 
 export default function HeroComponent() {
   return (
     <Container className={styles.hero}>
       <Row>
         <Col
-          sm={6}
-          className={`d-flex align-item-center px-3 px-sm-0 ${styles.heroReset}`}
+          lg={6}
+          className={`d-flex align-item-center px-3 px-sm-0  ${styles.hero__reset}`}
           data-aos="fade-right"
           data-aos-duration="1000"
         >
-          <div className={styles.heroText}>
+          <div className={styles.hero__text}>
             <h1>
               Sewa & Rental <br className="d-block d-sm-none" />
               Mobil Terbaik di kawasan Ciamis
@@ -27,19 +27,17 @@ export default function HeroComponent() {
               untuk sewa mobil selama 24 jam.
             </p>
             <a href="./cari_mobil.html">
-              <Button className={`btn btn-success ${styles.heroBtn}`}>
-                Mulai Sewa Mobil
-              </Button>
+              <Button className={styles.hero__btn}>Mulai Sewa Mobil</Button>
             </a>
           </div>
         </Col>
         <Col
-          sm={6}
-          className={styles.heroReset}
+          lg={6}
+          className={styles.hero__reset}
           data-aos="fade-left"
           data-aos-duration="1000"
         >
-          <div className={styles.heroImage}>
+          <div className={styles.hero__image}>
             <Image
               src="./images/car.svg"
               alt=""

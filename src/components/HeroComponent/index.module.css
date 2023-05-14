@@ -8,11 +8,11 @@
 
 /* Hero star */
 .hero {
-  margin-top: 50px;
-  padding: 37px 20px 0px 20px;
+  margin-top: 54px;
+  padding: 37px 20px 0px 14px;
 }
 
-.heroBtn {
+.hero__btn {
   background-color: var(--btn-color);
   border: none;
   padding: 8px 12px;
@@ -22,17 +22,23 @@
   border-radius: 2px;
 }
 
-.heroBtn:hover {
+.hero__btn:hover {
   background-color: var(--btn-hover);
 }
 
-.heroText h1 {
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__text h1 {
   font-weight: 700;
   font-size: 3.6rem;
   line-height: 54px;
   color: black;
 }
-.heroText p {
+.hero__text p {
   margin: 16px 0px;
   font-weight: 300;
   font-size: 1.4rem;
@@ -40,13 +46,13 @@
   color: black;
 }
 
-.heroImage {
+.hero__image {
   width: 640px;
   position: relative;
-  left: 6%;
+  left: 8%;
 }
 
-.heroReset {
+.hero__reset {
   padding: 0;
 }
 
@@ -55,12 +61,12 @@
     padding: 32px 12px 0px 12px;
   }
 
-  .heroImage {
+  .hero__image {
     margin-top: 24px;
     overflow-x: hidden;
     width: 100%;
     z-index: 1;
-    padding-left: 4%;
+    padding-left: 2%;
     position: static;
   }
 }

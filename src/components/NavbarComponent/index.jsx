@@ -15,7 +15,7 @@ export default function NavbarComponent() {
   const [colorNav, setColorNav] = useState(false);
 
   const handleColorNav = () => {
-    if (window.scrollY >= 200) {
+    if (window.scrollY >= 400) {
       setColorNav(true);
     } else {
       setColorNav(false);
@@ -23,7 +23,6 @@ export default function NavbarComponent() {
   };
 
   useEffect(() => {
-    handleColorNav();
     window.addEventListener("scroll", handleColorNav);
     return () => {
       window.removeEventListener("scroll", handleColorNav);
