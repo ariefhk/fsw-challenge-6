@@ -24,18 +24,20 @@
   line-height: 20px;
 }
 
-.whyusCard {
+.whyus__card {
   padding: 20px;
   color: #000000;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
 }
 
-.whyusCard h5 {
+.whyus__card h5 {
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 24px;
 }
 
-.whyusCard p {
+.whyus__card p {
   font-weight: 300;
   font-size: 1.4rem;
   line-height: 20px;
@@ -44,6 +46,7 @@
 @media (max-width: 576px) {
   .whyus {
     margin-top: 64px;
+    padding: 0 12px;
   }
 
   .whyus h2 {
@@ -54,17 +57,17 @@
     padding: 16px 0 16px 0;
   }
 
-  .whyusCard {
+  .whyus__card {
     padding: 24px;
     margin: 0 4px;
     color: #000000;
   }
 
-  .whyusCard h5 {
+  .whyus__card h5 {
     padding: 18px 0px 10px 0px;
   }
 
-  .whyusCard p {
+  .whyus__card p {
     font-weight: 300;
     font-size: 1.4rem;
     line-height: 20px;

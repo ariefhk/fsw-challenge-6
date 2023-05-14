@@ -7,9 +7,9 @@ export default function WhyUsComponent() {
     <Container className={styles.whyus}>
       <h2>Why Us?</h2>
       <p>Mengapa harus pilih Binar Car Rental?</p>
-      <Row className="gap-4 gap-lg-0">
+      <Row className="g-5">
         <Col lg={3}>
-          <Card className={styles.whyusCard}>
+          <Card className={styles.whyus__card}>
             <Image
               src="./images/ic_check.svg"
               alt="Check Icon"
@@ -18,14 +18,17 @@ export default function WhyUsComponent() {
             />
             <h5 className="my-sm-4">Mobil Lengkap</h5>
             <p>
-              Tersedia banyak pilihan mobil, kondisi masih baru, bersih <br />{" "}
-              dan terawat
+              Tersedia banyak pilihan mobil,
+              <br className="d-none d-sm-block" /> kondisi masih baru, bersih
+              dan
+              <br className="d-none d-sm-block" />
+              terawat
             </p>
           </Card>
         </Col>
 
         <Col lg={3}>
-          <Card className={styles.whyusCard}>
+          <Card className={styles.whyus__card}>
             <Image
               src="./images/ic_tag.svg"
               alt="Tag Icon"
@@ -40,7 +43,7 @@ export default function WhyUsComponent() {
           </Card>
         </Col>
         <Col lg={3}>
-          <Card className={styles.whyusCard}>
+          <Card className={styles.whyus__card}>
             <Image
               src="./images/ic_blue_check.svg"
               alt="Blue Check Icon"
@@ -56,7 +59,7 @@ export default function WhyUsComponent() {
         </Col>
 
         <Col lg={3}>
-          <Card className={styles.whyusCard}>
+          <Card className={styles.whyus__card}>
             <Image
               src="./images/ic_medal.svg"
               alt="Medal icon"
