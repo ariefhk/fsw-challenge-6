@@ -35,11 +35,12 @@ export default function NavbarComponent() {
 
   return (
     <Navbar
+      style={{ padding: "10px 0" }}
       expand="lg"
       fixed="top"
       className={colorNav ? styles.nav__colored : styles.nav__transparent}
     >
-      <Container>
+      <Container className={styles.nav__space}>
         <Navbar.Brand href="#home">
           <Image src="./images/brand.svg" />
         </Navbar.Brand>
@@ -65,7 +66,7 @@ export default function NavbarComponent() {
           onClick={handleShow}
           className={styles.navbar__toggle}
         >
-          <FiMenu className="navbar-toggler-icon" />
+          <FiMenu className={`navbar-toggler-icon ${styles.nav__icon}`} />
         </Navbar.Toggle>
         <Offcanvas
           show={show}
@@ -73,11 +74,13 @@ export default function NavbarComponent() {
           style={{ width: "50%" }}
           placement="end"
         >
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title>BCR</Offcanvas.Title>
+          <Offcanvas.Header closeButton className={styles.offCanvas__header}>
+            <Offcanvas.Title className={styles.offCanvas__header__title}>
+              BCR
+            </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav>
+            <Nav className={styles.nav__offCanvas}>
               <Nav.Link href="#home" className={styles.nav__link}>
                 Our Services
               </Nav.Link>
@@ -90,7 +93,7 @@ export default function NavbarComponent() {
               <Nav.Link href="#link" className={styles.nav__link}>
                 FAQ
               </Nav.Link>
-              <Button className={styles.nav__button} type="submit">
+              <Button className={styles.nav__offCanvas__btn} type="submit">
                 Register
               </Button>
             </Nav>

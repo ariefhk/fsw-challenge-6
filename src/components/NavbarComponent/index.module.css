@@ -68,6 +68,38 @@
   .nav {
     display: none;
   }
+  .nav__icon {
+    color: black;
+    width: 24px;
+    height: 24px;
+  }
+  .nav__space {
+    margin: 0 8px;
+  }
+  .offCanvas__header {
+    margin: 38px 16px 0 6px;
+  }
+  .offCanvas__header__title {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 20px;
+  }
+  .nav__offCanvas {
+    gap: 10px;
+    margin-left: 6px;
+  }
+  .nav__offCanvas__btn {
+    background-color: var(--btn-color);
+    border: none;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 20px;
+    border-radius: 2px;
+    padding: 8px 12px;
+    width: max-content;
+  }
+  .nav__offCanvas__btn:hover {
+    background-color: var(--btn-hover);
+  }
 }
-
 /* Navbar end*/

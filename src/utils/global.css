@@ -24,3 +24,8 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+.offcanvas-header .btn-close {
+  opacity: 1;
+  background-size: 12px 12px;
+}
