@@ -32,7 +32,7 @@ export default function NavbarComponent() {
     return () => {
       window.removeEventListener("scroll", handleColorNav);
     };
-  }, [handleColorNav]);
+  });
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -42,7 +42,7 @@ export default function NavbarComponent() {
       style={{ padding: "10px 0" }}
       expand="lg"
       fixed="top"
-      className={colorNav ? styles.nav__colored : styles.nav__transparent}
+      className={styles.nav__transparent}
     >
       <Container className={styles.nav__space}>
         <Navbar.Brand href="#home">
