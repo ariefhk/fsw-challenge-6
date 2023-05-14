@@ -14,24 +14,24 @@
   align-items: center;
 }
 
-.serviceText h1 {
+.service__text h1 {
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 36px;
 }
-.serviceText p {
+.service__text p {
   font-weight: 300;
   font-size: 1.4rem;
   line-height: 20px;
   margin: 24px 0 18px 0;
 }
 
-.serviceText__link {
+.service__text__link {
   list-style: none;
   padding: 0;
 }
 
-.serviceText__check {
+.service__text__check {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -41,7 +41,7 @@
   line-height: 20px;
 }
 
-.serviceText__space {
+.service__text__space {
   display: block;
 }
 
@@ -49,22 +49,22 @@
   .service {
     height: auto;
     flex-direction: column;
-    margin: 60px -6px 0px -6px;
+    margin-top: 60px;
   }
 
-  .serviceImage {
+  .service__image {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .serviceImageBox {
+  .service__image__box {
     width: 80%;
   }
 
-  .serviceText {
+  .service__text {
     margin-top: 30px;
   }
-  .serviceText p {
+  .service__text p {
     margin-top: 16px;
   }
 }
