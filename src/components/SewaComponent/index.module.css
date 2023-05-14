@@ -6,7 +6,6 @@
   --border-color: rgba(212, 212, 212, 1);
 }
 
-
 .sewa h1 {
   font-weight: 700;
   font-size: 3.6rem;
@@ -47,10 +46,7 @@
 @media (max-width: 576px) {
   .sewa {
     margin-top: 60px;
-  }
-
-  .sewa__width {
-    margin: 0px 4px;
+    padding: 0 16px;
   }
 
   .sewa h1 {
