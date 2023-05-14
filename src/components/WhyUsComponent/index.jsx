@@ -7,8 +7,8 @@ export default function WhyUsComponent() {
     <Container className={styles.whyus}>
       <h2>Why Us?</h2>
       <p>Mengapa harus pilih Binar Car Rental?</p>
-      <Row className="g-5">
-        <Col lg={3}>
+      <Row className="gy-5 gy-lg-0 gx-lg-5 gx-0">
+        <Col sm={3}>
           <Card className={styles.whyus__card}>
             <Image
               src="./images/ic_check.svg"
@@ -27,7 +27,7 @@ export default function WhyUsComponent() {
           </Card>
         </Col>
 
-        <Col lg={3}>
+        <Col sm={3}>
           <Card className={styles.whyus__card}>
             <Image
               src="./images/ic_tag.svg"
@@ -42,7 +42,7 @@ export default function WhyUsComponent() {
             </p>
           </Card>
         </Col>
-        <Col lg={3}>
+        <Col sm={3}>
           <Card className={styles.whyus__card}>
             <Image
               src="./images/ic_blue_check.svg"
@@ -58,7 +58,7 @@ export default function WhyUsComponent() {
           </Card>
         </Col>
 
-        <Col lg={3}>
+        <Col sm={3}>
           <Card className={styles.whyus__card}>
             <Image
               src="./images/ic_medal.svg"
