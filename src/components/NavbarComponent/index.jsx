@@ -29,9 +29,9 @@ export default function NavbarComponent() {
   useEffect(() => {
     handleColorNav();
     window.addEventListener("scroll", handleColorNav);
-    return () => {
-      window.removeEventListener("scroll", handleColorNav);
-    };
+    // return () => {
+    //   window.removeEventListener("scroll", handleColorNav);
+    // };
   });
 
   const handleClose = () => setShow(false);
