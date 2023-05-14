@@ -15,7 +15,7 @@ export default function NavbarComponent() {
   const [colorNav, setColorNav] = useState(false);
 
   const handleColorNav = () => {
-    if (window.scrollY >= 400) {
+    if (window.scrollY >= 200) {
       setColorNav(true);
     } else {
       setColorNav(false);
