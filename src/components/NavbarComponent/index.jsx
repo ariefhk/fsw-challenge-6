@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
 import {
   Nav,
@@ -12,27 +12,27 @@ import styles from "./index.module.css";
 
 export default function NavbarComponent() {
   const [show, setShow] = useState(false);
-  // const [colorNav, setColorNav] = useState(false);
+  const [colorNav, setColorNav] = useState(false);
 
-  // const handleColorNav = () => {
-  //   if (
-  //     window.scrollY >= 200 ||
-  //     document.body.scrollTop >= 200 ||
-  //     document.documentElement.scrollTop >= 200
-  //   ) {
-  //     setColorNav(true);
-  //   } else {
-  //     setColorNav(false);
-  //   }
-  // };
+  const handleColorNav = () => {
+    if (
+      window.scrollY >= 200 ||
+      document.body.scrollTop >= 200 ||
+      document.documentElement.scrollTop >= 200
+    ) {
+      setColorNav(true);
+    } else {
+      setColorNav(false);
+    }
+  };
 
-  // useEffect(() => {
-  //   handleColorNav();
-  //   window.addEventListener("scroll", handleColorNav);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleColorNav);
-  //   };
-  // });
+  useEffect(() => {
+    handleColorNav();
+    window.addEventListener("scroll", handleColorNav);
+    return () => {
+      window.removeEventListener("scroll", handleColorNav);
+    };
+  });
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -42,7 +42,7 @@ export default function NavbarComponent() {
       style={{ padding: "10px 0" }}
       expand="lg"
       fixed="top"
-      className={styles.nav__transparent}
+      className={colorNav ? styles.nav__colored : styles.nav__transparent}
     >
       <Container className={styles.nav__space}>
         <Navbar.Brand href="#home">
