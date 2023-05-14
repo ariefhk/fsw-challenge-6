@@ -1,0 +1,67 @@
+:root {
+  --primary-color: rgba(13, 40, 166, 1);
+  --secondary-color: rgba(241, 243, 255, 1);
+  --btn-color: rgba(92, 184, 95, 1);
+  --btn-hover: rgba(61, 123, 63, 1);
+  --border-color: rgba(212, 212, 212, 1);
+}
+
+/* Hero star */
+.hero {
+  margin-top: 50px;
+  padding: 37px 20px 0px 20px;
+}
+
+.heroBtn {
+  background-color: var(--btn-color);
+  border: none;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 20px;
+  border-radius: 2px;
+}
+
+.heroBtn:hover {
+  background-color: var(--btn-hover);
+}
+
+.heroText h1 {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 54px;
+  color: black;
+}
+.heroText p {
+  margin: 16px 0px;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 20px;
+  color: black;
+}
+
+.heroImage {
+  width: 640px;
+  position: relative;
+  left: 6%;
+}
+
+.heroReset {
+  padding: 0;
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 32px 12px 0px 12px;
+  }
+
+  .heroImage {
+    margin-top: 24px;
+    overflow-x: hidden;
+    width: 100%;
+    z-index: 1;
+    padding-left: 4%;
+    position: static;
+  }
+}
+/* Hero end */

@@ -1,0 +1,71 @@
+:root {
+  --primary-color: rgba(13, 40, 166, 1);
+  --secondary-color: rgba(241, 243, 255, 1);
+  --btn-color: rgba(92, 184, 95, 1);
+  --btn-hover: rgba(61, 123, 63, 1);
+  --border-color: rgba(212, 212, 212, 1);
+}
+
+/* service start */
+.service {
+  height: 100vh;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.serviceText h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 36px;
+}
+.serviceText p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 20px;
+  margin: 24px 0 18px 0;
+}
+
+.serviceText__link {
+  list-style: none;
+  padding: 0;
+}
+
+.serviceText__check {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 20px;
+}
+
+.serviceText__space {
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .service {
+    height: auto;
+    flex-direction: column;
+    margin: 60px -6px 0px -6px;
+  }
+
+  .serviceImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .serviceImageBox {
+    width: 80%;
+  }
+
+  .serviceText {
+    margin-top: 30px;
+  }
+  .serviceText p {
+    margin-top: 16px;
+  }
+}
+/* service end */
