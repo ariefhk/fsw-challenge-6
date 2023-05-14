@@ -12,27 +12,27 @@ import styles from "./index.module.css";
 
 export default function NavbarComponent() {
   const [show, setShow] = useState(false);
-  const [colorNav, setColorNav] = useState(false);
+  // const [colorNav, setColorNav] = useState(false);
 
-  const handleColorNav = () => {
-    if (
-      window.scrollY >= 200 ||
-      document.body.scrollTop >= 200 ||
-      document.documentElement.scrollTop >= 200
-    ) {
-      setColorNav(true);
-    } else {
-      setColorNav(false);
-    }
-  };
+  // const handleColorNav = () => {
+  //   if (
+  //     window.scrollY >= 200 ||
+  //     document.body.scrollTop >= 200 ||
+  //     document.documentElement.scrollTop >= 200
+  //   ) {
+  //     setColorNav(true);
+  //   } else {
+  //     setColorNav(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    handleColorNav();
-    window.addEventListener("scroll", handleColorNav);
-    return () => {
-      window.removeEventListener("scroll", handleColorNav);
-    };
-  });
+  // useEffect(() => {
+  //   handleColorNav();
+  //   window.addEventListener("scroll", handleColorNav);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleColorNav);
+  //   };
+  // });
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
