@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Hero, Footer, GetCarForm } from "../../components";
+import { Navbar, Hero, Footer, GetCarForm, ListCar } from "../../components";
 
 export default function GetCarPage() {
   return (
@@ -10,6 +10,7 @@ export default function GetCarPage() {
       </header>
       <main>
         <GetCarForm />
+        <ListCar />
       </main>
       <footer>
         <Footer />

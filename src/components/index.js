@@ -7,6 +7,7 @@ import WhyUs from "./WhyUsComponent";
 import Faq from "./FaqComponent";
 import Footer from "./FooterComponent";
 import GetCarForm from "./GetCarFormComponent";
+import ListCar from "./ListCarComponent";
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   Faq,
   Footer,
   GetCarForm,
+  ListCar,
 };
