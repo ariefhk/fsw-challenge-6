@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 
 export default function SewaComponent() {
   return (
-    <Container className={styles.sewa}>
+    <Container id="sewa" className={styles.sewa}>
       <div className={styles.sewa__width}>
         <h1>
           Sewa Mobil di <br className="d-block d-sm-none" />

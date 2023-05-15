@@ -5,7 +5,8 @@ import "aos/dist/aos.css";
 import "./utils/reset.css";
 import "./utils/global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import App from "./App";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { LandingPage, GetCarPage } from "./pages";
 import reportWebVitals from "./reportWebVitals";
 
 AOS.init();
@@ -13,7 +14,12 @@ AOS.init();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/cars" element={<GetCarPage />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

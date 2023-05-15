@@ -45,7 +45,7 @@ export default function FooterComponent() {
         >
           <p>Copyright Binar 2022</p>
           <div>
-            <a href="./index.html">
+            <a href="/">
               <img
                 src="./images/brand.svg"
                 alt=""

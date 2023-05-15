@@ -6,5 +6,16 @@ import Testimonial from "./TestimonialComponent";
 import WhyUs from "./WhyUsComponent";
 import Faq from "./FaqComponent";
 import Footer from "./FooterComponent";
+import GetCarForm from "./GetCarFormComponent";
 
-export { Navbar, Hero, Service, Sewa, Testimonial, WhyUs, Faq, Footer };
+export {
+  Navbar,
+  Hero,
+  Service,
+  Sewa,
+  Testimonial,
+  WhyUs,
+  Faq,
+  Footer,
+  GetCarForm,
+};

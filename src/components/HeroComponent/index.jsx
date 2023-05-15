@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Container, Image, Button } from "react-bootstrap";
 import styles from "./index.module.css";
 
-export default function HeroComponent() {
+export default function HeroComponent({ isLandingPage }) {
   return (
     <Container className={styles.hero}>
       <Row>
@@ -26,9 +26,11 @@ export default function HeroComponent() {
               <br className="d-sm-block d-none" />
               untuk sewa mobil selama 24 jam.
             </p>
-            <a href="./cari_mobil.html">
-              <Button className={styles.hero__btn}>Mulai Sewa Mobil</Button>
-            </a>
+            {isLandingPage && (
+              <a href="/cars">
+                <Button className={styles.hero__btn}>Mulai Sewa Mobil</Button>
+              </a>
+            )}
           </div>
         </Col>
         <Col

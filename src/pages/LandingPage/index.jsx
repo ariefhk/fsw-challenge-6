@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Navbar,
   Hero,
@@ -15,7 +16,7 @@ export default function LandingPage() {
     <>
       <header>
         <Navbar />
-        <Hero />
+        <Hero isLandingPage />
       </header>
       <main>
         <Service />

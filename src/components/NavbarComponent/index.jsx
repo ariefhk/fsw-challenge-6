@@ -45,20 +45,20 @@ export default function NavbarComponent() {
       className={colorNav ? styles.nav__colored : styles.nav__transparent}
     >
       <Container className={styles.nav__space}>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <Image src="./images/brand.svg" />
         </Navbar.Brand>
         <Nav className={`ms-auto ${styles.nav}`}>
-          <Nav.Link href="#home" className={styles.nav__link}>
+          <Nav.Link href="#services" className={styles.nav__link}>
             Our Services
           </Nav.Link>
-          <Nav.Link href="#home" className={styles.nav__link}>
+          <Nav.Link href="#whyus" className={styles.nav__link}>
             Why Us
           </Nav.Link>
-          <Nav.Link href="#link" className={styles.nav__link}>
+          <Nav.Link href="#testimonial" className={styles.nav__link}>
             Testimonial
           </Nav.Link>
-          <Nav.Link href="#link" className={styles.nav__link}>
+          <Nav.Link href="#faq" className={styles.nav__link}>
             FAQ
           </Nav.Link>
           <Button className={styles.nav__button} type="submit">

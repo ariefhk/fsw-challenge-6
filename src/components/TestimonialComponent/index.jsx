@@ -9,7 +9,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 export default function TestimonialComponent() {
   return (
     <>
-      <Container className={styles.testimonial}>
+      <Container id="testimonial" className={styles.testimonial}>
         <h1>Testimonial</h1>
         <p>Berbagai review positif dari para pelanggan kami</p>
       </Container>

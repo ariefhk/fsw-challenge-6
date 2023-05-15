@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 
 export default function ServiceComponent() {
   return (
-    <Container className={styles.service}>
+    <Container id="services" className={styles.service}>
       <Row className="w-100 align-items-sm-center">
         <Col lg={6} className={styles.service__image}>
           <div className={styles.service__image__box}>

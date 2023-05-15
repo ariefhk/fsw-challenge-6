@@ -18,6 +18,7 @@ header {
   background-color: rgba(241, 243, 255, 1);
 }
 
+/* handling navbar & offcanvas  start */
 .navbar-toggler .navbar-toggler-icon {
   background: none;
   display: flex;
@@ -29,10 +30,22 @@ header {
   opacity: 1;
   background-size: 12px 12px;
 }
+/* handling navbar & offcanvas  end */
 
+/* handling accordion start */
 .accordion-button {
   color: black;
   background-color: grey;
-  /* box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0
-    var(--bs-accordion-border-color); */
 }
+
+/* handling accordion end */
+
+/* handling sweet alert start */
+.swal2-shown {
+  overflow: unset !important;
+  padding-right: 0px !important;
+}
+.swal2-popup {
+  font-size: 1.6rem !important;
+}
+/* handling sweet alert end */

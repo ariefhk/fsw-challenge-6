@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 
 export default function WhyUsComponent() {
   return (
-    <Container className={styles.whyus}>
+    <Container id="whyus" className={styles.whyus}>
       <h2>Why Us?</h2>
       <p>Mengapa harus pilih Binar Car Rental?</p>
       <Row className="gy-5 gy-lg-0 gx-lg-5 gx-0">
