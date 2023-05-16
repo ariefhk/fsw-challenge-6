@@ -1,8 +1,27 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
 import styles from "./index.module.css";
+import useInput from "../../hooks/useInput";
 
 export default function GetCarFormComponent() {
+  const [driver, handleDriver] = useInput("");
+  const [date, handleDate] = useInput("");
+  const [time, handleTime] = useInput("");
+  const [passenger, handlePassenger] = useInput("");
+
+  const handleSubmit = () => {
+    let dateTime = new Date(`${date} ${time}`);
+    const data = {
+      driver,
+      dateTime,
+      passenger,
+    };
+
+    // setDriver("")
+
+    console.log(data);
+  };
+
   return (
     <Container>
       <div className="cars-form">
@@ -17,6 +36,8 @@ export default function GetCarFormComponent() {
             <div className={styles.form__box__input}>
               <img src="./images/down_input.svg" alt="" srcset="" />
               <select
+                value={driver}
+                onChange={handleDriver}
                 className={styles.form__select}
                 aria-label="Default select example"
                 name="driver"
@@ -44,6 +65,8 @@ export default function GetCarFormComponent() {
                 id="date"
                 className={styles.form__control}
                 placeholder="Pilih Tanggal"
+                onChange={handleDate}
+                value={date}
               />
             </div>
           </div>
@@ -58,6 +81,8 @@ export default function GetCarFormComponent() {
                 id="img-placeholder"
               />
               <select
+                onChange={handleTime}
+                value={time}
                 className={styles.form__select}
                 aria-label="Default select example"
                 name="time"
@@ -89,6 +114,8 @@ export default function GetCarFormComponent() {
             <div className={styles.form__box__input}>
               <img src="./images/users_input.svg" alt="" srcset="" />
               <input
+                onChange={handlePassenger}
+                value={passenger}
                 className={styles.form__control}
                 type="number"
                 placeholder="Jumlah Penumpang"
@@ -102,6 +129,7 @@ export default function GetCarFormComponent() {
               ....
             </label>
             <Button
+              onClick={handleSubmit}
               id="btn-search-car"
               name="btn-search-car"
               type="button"
