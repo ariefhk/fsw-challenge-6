@@ -100,7 +100,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   visibility: hidden;
 }
 
-.form__box .btn__success {
+.btn__success {
   padding: 8px 12px;
   background: #5cb85f;
   border-radius: 2px;
@@ -110,7 +110,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 20px;
 }
 
-.form__box .btn__success:hover {
+.btn__success:hover {
   background-color: var(--btn-hover);
 }
 .cars__form,

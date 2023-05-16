@@ -1,25 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Button } from "react-bootstrap";
 import styles from "./index.module.css";
-import useInput from "../../hooks/useInput";
 
 export default function GetCarFormComponent() {
-  const [driver, handleDriver] = useInput("");
-  const [date, handleDate] = useInput("");
-  const [time, handleTime] = useInput("");
-  const [passenger, handlePassenger] = useInput("");
+  const [input, setInput] = useState({
+    driver: "",
+    date: "",
+    time: "",
+    passenger: "",
+  });
 
-  const handleSubmit = () => {
-    let dateTime = new Date(`${date} ${time}`);
+  const handleChange = (event) => {
+    let name = event.target.name;
+    let value = event.target.value;
+    if (name === "driver") {
+      setInput({ ...input, driver: Boolean(value) });
+    } else if (name === "date") {
+      setInput({ ...input, date: value });
+    } else if (name === "time") {
+      setInput({ ...input, time: value });
+    } else if (name === "passenger") {
+      setInput({ ...input, passenger: Number(value) });
+    }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    let dateTime = new Date(`${input.date} ${input.time}`);
     const data = {
-      driver,
-      dateTime,
-      passenger,
+      driver: input.driver,
+      dateTime: new Date(dateTime).getTime(),
+      passenger: input.passenger,
     };
 
-    // setDriver("")
-
     console.log(data);
+    setInput({
+      date: "",
+      time: "",
+      driver: "",
+      passenger: "",
+    });
   };
 
   return (
@@ -36,8 +56,8 @@ export default function GetCarFormComponent() {
             <div className={styles.form__box__input}>
               <img src="./images/down_input.svg" alt="" srcset="" />
               <select
-                value={driver}
-                onChange={handleDriver}
+                value={input.driver}
+                onChange={handleChange}
                 className={styles.form__select}
                 aria-label="Default select example"
                 name="driver"
@@ -60,13 +80,13 @@ export default function GetCarFormComponent() {
             <label for="date">Tanggal</label>
             <div className={styles.form__box__input}>
               <input
+                value={input.date}
+                onChange={handleChange}
                 type="date"
                 name="date"
                 id="date"
                 className={styles.form__control}
                 placeholder="Pilih Tanggal"
-                onChange={handleDate}
-                value={date}
               />
             </div>
           </div>
@@ -81,8 +101,8 @@ export default function GetCarFormComponent() {
                 id="img-placeholder"
               />
               <select
-                onChange={handleTime}
-                value={time}
+                value={input.time}
+                onChange={handleChange}
                 className={styles.form__select}
                 aria-label="Default select example"
                 name="time"
@@ -114,12 +134,12 @@ export default function GetCarFormComponent() {
             <div className={styles.form__box__input}>
               <img src="./images/users_input.svg" alt="" srcset="" />
               <input
-                onChange={handlePassenger}
-                value={passenger}
+                name="passenger"
+                value={input.passenger}
+                onChange={handleChange}
                 className={styles.form__control}
                 type="number"
                 placeholder="Jumlah Penumpang"
-                name="passenger"
                 id="passenger"
               />
             </div>
@@ -133,7 +153,7 @@ export default function GetCarFormComponent() {
               id="btn-search-car"
               name="btn-search-car"
               type="button"
-              className="btn btn-success"
+              className={styles.btn__success}
             >
               Cari Mobil
             </Button>
