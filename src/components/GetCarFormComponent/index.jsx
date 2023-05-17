@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchCars, getCarStatus, carSlice } from "../../reducers/carReducer";
-// import {} from '../../reducers/carReducer'
 import { Container, Button } from "react-bootstrap";
 import styles from "./index.module.css";
 
@@ -64,9 +63,9 @@ export default function GetCarFormComponent() {
           data-aos-duration="1000"
         >
           <div className={styles.form__box}>
-            <label for="driver">Tipe Driver</label>
+            <label htmlFor="driver">Tipe Driver</label>
             <div className={styles.form__box__input}>
-              <img src="./images/down_input.svg" alt="" srcset="" />
+              <img src="./images/down_input.svg" alt="" srcSet="" />
               <select
                 value={input.driver}
                 onChange={handleChange}
@@ -75,7 +74,7 @@ export default function GetCarFormComponent() {
                 name="driver"
                 id="driver"
               >
-                <option selected className="select-placeholder">
+                <option className="select-placeholder">
                   Pilih Tipe Driver
                 </option>
                 <option value="true" className={styles.select__val}>
@@ -89,7 +88,7 @@ export default function GetCarFormComponent() {
           </div>
 
           <div className={styles.form__box}>
-            <label for="date">Tanggal</label>
+            <label htmlFor="date">Tanggal</label>
             <div className={styles.form__box__input}>
               <input
                 value={input.date}
@@ -104,12 +103,12 @@ export default function GetCarFormComponent() {
           </div>
 
           <div className={styles.form__box}>
-            <label for="time">Waktu Jemput/Ambil</label>
+            <label htmlFor="time">Waktu Jemput/Ambil</label>
             <div className={styles.form__box__input}>
               <img
                 src="./images/clock_input.svg"
                 alt=""
-                srcset=""
+                srcSet=""
                 id="img-placeholder"
               />
               <select
@@ -120,9 +119,7 @@ export default function GetCarFormComponent() {
                 name="time"
                 id="time"
               >
-                <option selected className="select-placeholder">
-                  Pilih Waktu
-                </option>
+                <option className="select-placeholder">Pilih Waktu</option>
                 <option value="08:00" className={styles.select__val}>
                   08.00 WIB
                 </option>
@@ -142,9 +139,9 @@ export default function GetCarFormComponent() {
             </div>
           </div>
           <div className={styles.form__box}>
-            <label for="capacity">Jumlah Penumpang (Optional)</label>
+            <label htmlFor="capacity">Jumlah Penumpang (Optional)</label>
             <div className={styles.form__box__input}>
-              <img src="./images/users_input.svg" alt="" srcset="" />
+              <img src="./images/users_input.svg" alt="" srcSet="" />
               <input
                 name="capacity"
                 value={input.capacity}
@@ -157,7 +154,7 @@ export default function GetCarFormComponent() {
             </div>
           </div>
           <div className={styles.form__box}>
-            <label for="btn-search-car" className={styles.btn__search__car}>
+            <label htmlFor="btn-search-car" className={styles.btn__search__car}>
               ....
             </label>
             <Button

@@ -34,12 +34,11 @@ export default function ListCarComponent() {
       </div>
     );
   } else if (loading === "succeeded") {
-    console.log(filteredCars);
     content = (
       <Row className={`gy-sm-5 gx-sm-5 gy-4 ${styles.card__container}`}>
         {filteredCars.length > 0
           ? filteredCars.map((car) => (
-              <Col sm={4}>
+              <Col sm={4} key={car.id}>
                 <Card key={car.id} className={styles.card}>
                   <Card.Img
                     variant="top"
@@ -52,7 +51,7 @@ export default function ListCarComponent() {
                     <p className={styles.card__body__model}>
                       {car.manufacture} {car.model}
                     </p>
-                    <p class={`my-3 ${styles.card__body__price}`}>
+                    <p className={`my-3 ${styles.card__body__price}`}>
                       Rp {formatRupiah(car.rentPerDay)} / hari
                     </p>
                     <p className={`mb-4 ${styles.card__body__desc}`}>
@@ -103,7 +102,7 @@ export default function ListCarComponent() {
               </Col>
             ))
           : cars.map((car) => (
-              <Col sm={4}>
+              <Col sm={4} key={car.id}>
                 <Card key={car.id} className={styles.card}>
                   <Card.Img
                     variant="top"
@@ -116,7 +115,7 @@ export default function ListCarComponent() {
                     <p className={styles.card__body__model}>
                       {car.manufacture} {car.model}
                     </p>
-                    <p class={`my-3 ${styles.card__body__price}`}>
+                    <p className={`my-3 ${styles.card__body__price}`}>
                       Rp {formatRupiah(car.rentPerDay)} / hari
                     </p>
                     <p className={`mb-4 ${styles.card__body__desc}`}>

@@ -32,11 +32,11 @@ export default function FooterComponent() {
         >
           <p>Connect with us</p>
           <div className={`d-flex gap-3 my-2 ${styles.footer__icon}`}>
-            <img src="./images/facebook_icon.svg" alt="" srcset="" />
-            <img src="./images/instagram_icon.svg" alt="" srcset="" />
-            <img src="./images/twitter_icon.svg" alt="" srcset="" />
-            <img src="./images/mail_icon.svg" alt="" srcset="" />
-            <img src="./images/twitch_icon.svg" alt="" srcset="" />
+            <img src="./images/facebook_icon.svg" alt="" srcSet="" />
+            <img src="./images/instagram_icon.svg" alt="" srcSet="" />
+            <img src="./images/twitter_icon.svg" alt="" srcSet="" />
+            <img src="./images/mail_icon.svg" alt="" srcSet="" />
+            <img src="./images/twitch_icon.svg" alt="" srcSet="" />
           </div>
         </Col>
         <Col
@@ -49,7 +49,7 @@ export default function FooterComponent() {
               <img
                 src="./images/brand.svg"
                 alt=""
-                srcset=""
+                srcSet=""
                 className="img-fluid"
               />
             </a>
