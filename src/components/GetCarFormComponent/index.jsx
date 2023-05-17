@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchCars, getCarStatus, carSlice } from "../../reducers/carReducer";
+// import {} from '../../reducers/carReducer'
 import { Container, Button } from "react-bootstrap";
 import styles from "./index.module.css";
 
 export default function GetCarFormComponent() {
+  const { filteredCars } = carSlice.actions;
+  const dispatch = useDispatch();
+  const loading = useSelector(getCarStatus);
   const [input, setInput] = useState({
     driver: "",
     date: "",
     time: "",
-    passenger: "",
+    capacity: "",
   });
+
+  useEffect(() => {
+    if (loading === "idle") {
+      dispatch(fetchCars());
+    }
+  }, [loading, dispatch]);
 
   const handleChange = (event) => {
     let name = event.target.name;
@@ -19,26 +31,26 @@ export default function GetCarFormComponent() {
       setInput({ ...input, date: value });
     } else if (name === "time") {
       setInput({ ...input, time: value });
-    } else if (name === "passenger") {
-      setInput({ ...input, passenger: Number(value) });
+    } else if (name === "capacity") {
+      setInput({ ...input, capacity: value });
     }
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    let dateTime = new Date(`${input.date} ${input.time}`);
-    const data = {
-      driver: input.driver,
-      dateTime: new Date(dateTime).getTime(),
-      passenger: input.passenger,
-    };
+    const dateTime = new Date(`${input.date} ${input.time}`);
+    dispatch(
+      filteredCars({
+        dateTime,
+        capacity: Number(input.capacity),
+      })
+    );
 
-    console.log(data);
     setInput({
+      driver: "",
       date: "",
       time: "",
-      driver: "",
-      passenger: "",
+      capacity: "",
     });
   };
 
@@ -130,17 +142,17 @@ export default function GetCarFormComponent() {
             </div>
           </div>
           <div className={styles.form__box}>
-            <label for="passenger">Jumlah Penumpang (Optional)</label>
+            <label for="capacity">Jumlah Penumpang (Optional)</label>
             <div className={styles.form__box__input}>
               <img src="./images/users_input.svg" alt="" srcset="" />
               <input
-                name="passenger"
-                value={input.passenger}
+                name="capacity"
+                value={input.capacity}
                 onChange={handleChange}
                 className={styles.form__control}
                 type="number"
                 placeholder="Jumlah Penumpang"
-                id="passenger"
+                id="capacity"
               />
             </div>
           </div>
