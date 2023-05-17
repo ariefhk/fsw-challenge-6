@@ -9,13 +9,26 @@ const initialState = {
   cars: [],
   filteredCars: [],
   status: "idle", //'idle' | 'loading' | 'succeeded' | 'failed'
+  statusGetData: "idle", //'idle' | 'failed' | 'success'
   error: null,
 };
 
 export const fetchCars = createAsyncThunk("cars/fetchCars", async () => {
   try {
     const response = await axios.get(URL);
-    return response.data;
+    const modifyData = response.data.map((car) => {
+      const isPositive = getRandomInt(0, 1) === 1;
+      const timeAt = new Date();
+      const mutator = getRandomInt(1000000, 100000000);
+      const availableAt = new Date(
+        timeAt.getTime() + (isPositive ? mutator : -1 * mutator)
+      );
+      return {
+        ...car,
+        availableAt,
+      };
+    });
+    return modifyData;
   } catch (error) {
     return error.message;
   }
@@ -26,19 +39,7 @@ export const carSlice = createSlice({
   initialState,
   reducers: {
     filteredCars: (state, action) => {
-      const modifyCars = [...state.cars].map((car) => {
-        const isPositive = getRandomInt(0, 1) === 1;
-        const timeAt = new Date();
-        const mutator = getRandomInt(1000000, 100000000);
-        const availableAt = new Date(
-          timeAt.getTime() + (isPositive ? mutator : -1 * mutator)
-        );
-        return {
-          ...car,
-          availableAt,
-        };
-      });
-      state.filteredCars = modifyCars.filter((car) => {
+      const searchCar = state.cars.filter((car) => {
         if (!action.payload.capacity) {
           return (
             car.available &&
@@ -54,6 +55,10 @@ export const carSlice = createSlice({
             new Date(action.payload.dateTime).getTime()
         );
       });
+      searchCar.length === 0
+        ? (state.statusGetData = "failed")
+        : (state.statusGetData = "success");
+      state.filteredCars = searchCar;
     },
   },
   extraReducers: (builder) => {
@@ -73,6 +78,7 @@ export const carSlice = createSlice({
 
 export const getAllCar = (state) => state.cars.cars;
 export const getCarStatus = (state) => state.cars.status;
+export const getSearchStatus = (state) => state.cars.statusGetData;
 export const getfilteredCars = (state) => state.cars.filteredCars;
 export const getCarError = (state) => state.cars.error;
 

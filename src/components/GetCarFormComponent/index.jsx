@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchCars, getCarStatus, carSlice } from "../../reducers/carReducer";
 import { Container, Button } from "react-bootstrap";
 import styles from "./index.module.css";
+import Swal from "sweetalert2";
 
 export default function GetCarFormComponent() {
   const { filteredCars } = carSlice.actions;
@@ -25,7 +26,7 @@ export default function GetCarFormComponent() {
     let name = event.target.name;
     let value = event.target.value;
     if (name === "driver") {
-      setInput({ ...input, driver: Boolean(value) });
+      setInput({ ...input, driver: value });
     } else if (name === "date") {
       setInput({ ...input, date: value });
     } else if (name === "time") {
@@ -38,19 +39,25 @@ export default function GetCarFormComponent() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const dateTime = new Date(`${input.date} ${input.time}`);
+
+    console.log(input);
+    if (!input.date || !input.time || !input.driver) {
+      Swal.fire({
+        icon: "error",
+        scrollbarPadding: false,
+        timer: 1700,
+        title: "Form belum lengkap!",
+        text: "Silahkan input semua form.",
+      });
+      return;
+    }
+
     dispatch(
       filteredCars({
         dateTime,
         capacity: Number(input.capacity),
       })
     );
-
-    setInput({
-      driver: "",
-      date: "",
-      time: "",
-      capacity: "",
-    });
   };
 
   return (

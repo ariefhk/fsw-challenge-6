@@ -7,6 +7,6 @@ export const store = configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: false, // warn: in order to use the global ConfirmDialog, disable the serializableCheck check
+      serializableCheck: false, // warn: fixing bug in payload datetime
     }),
 });
