@@ -8,7 +8,7 @@ import "./utils/reset.css";
 import "./utils/global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { LandingPage, GetCarPage } from "./pages";
+import { LandingPage, GetCarPage, NotFoundPage } from "./pages";
 
 AOS.init();
 
@@ -17,6 +17,7 @@ root.render(
   <Provider store={store}>
     <BrowserRouter>
       <Routes>
+        <Route path="*" element={<NotFoundPage />} />
         <Route path="/" element={<LandingPage />} />
         <Route path="/cars" element={<GetCarPage />} />
       </Routes>

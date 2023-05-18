@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import Buttons from "../Buttons";
 import styles from "./index.module.css";
 
 export default function SewaComponent() {
@@ -18,12 +19,7 @@ export default function SewaComponent() {
           tempor incididunt ut <br className="d-block d-sm-none" />
           labore et dolore magna aliqua.
         </p>
-        <Button
-          className={`btn btn-success mt-3 ${styles.sewa__btn}`}
-          type="submit"
-        >
-          Mulai Sewa Mobil
-        </Button>
+        <Buttons type="submit">Mulai Sewa Mobil</Buttons>
       </div>
     </Container>
   );

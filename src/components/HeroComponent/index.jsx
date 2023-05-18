@@ -1,5 +1,6 @@
 import React from "react";
-import { Row, Col, Container, Image, Button } from "react-bootstrap";
+import { Row, Col, Container, Image } from "react-bootstrap";
+import Buttons from "../Buttons";
 import styles from "./index.module.css";
 
 export default function HeroComponent({ isLandingPage }) {
@@ -28,7 +29,7 @@ export default function HeroComponent({ isLandingPage }) {
             </p>
             {isLandingPage && (
               <a href="/cars">
-                <Button className={styles.hero__btn}>Mulai Sewa Mobil</Button>
+                <Buttons>Mulai Sewa Mobil</Buttons>
               </a>
             )}
           </div>

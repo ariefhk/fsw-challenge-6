@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import Buttons from "../Buttons";
 import { fetchCars, getCarStatus, carSlice } from "../../reducers/carReducer";
 import { themeSlice, getIsSearch } from "../../reducers/themeReducer";
-import { Container, Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import styles from "./index.module.css";
 import Swal from "sweetalert2";
 
@@ -51,7 +52,6 @@ export default function GetCarFormComponent() {
         title: "Form belum lengkap!",
         text: "Silahkan input semua form.",
       });
-      return;
     }
 
     dispatch(
@@ -168,15 +168,13 @@ export default function GetCarFormComponent() {
             <label htmlFor="btn-search-car" className={styles.btn__search__car}>
               ....
             </label>
-            <Button
+            <Buttons
+              id="btn-search-bar"
+              name="btn-search-bar"
               onClick={handleSubmit}
-              id="btn-search-car"
-              name="btn-search-car"
-              type="button"
-              className={styles.btn__success}
             >
               Cari Mobil
-            </Button>
+            </Buttons>
           </div>
         </form>
       </div>

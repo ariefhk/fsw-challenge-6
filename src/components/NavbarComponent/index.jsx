@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
-import {
-  Nav,
-  Navbar,
-  Container,
-  Image,
-  Offcanvas,
-  Button,
-} from "react-bootstrap";
+import { Nav, Navbar, Container, Image, Offcanvas } from "react-bootstrap";
 import styles from "./index.module.css";
+import Buttons from "../Buttons";
 
 export default function NavbarComponent() {
   const [show, setShow] = useState(false);
@@ -61,9 +55,7 @@ export default function NavbarComponent() {
           <Nav.Link href="#faq" className={styles.nav__link}>
             FAQ
           </Nav.Link>
-          <Button className={styles.nav__button} type="submit">
-            Register
-          </Button>
+          <Buttons type="submit">Register</Buttons>
         </Nav>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
@@ -97,9 +89,9 @@ export default function NavbarComponent() {
               <Nav.Link href="#link" className={styles.nav__link}>
                 FAQ
               </Nav.Link>
-              <Button className={styles.nav__offCanvas__btn} type="submit">
+              <Buttons style={{ width: "max-content" }} type="submit">
                 Register
-              </Button>
+              </Buttons>
             </Nav>
           </Offcanvas.Body>
         </Offcanvas>
