@@ -5,14 +5,6 @@ import axios from "axios";
 const URL =
   "https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json";
 
-const initialState = {
-  cars: [],
-  filteredCars: [],
-  status: "idle", //'idle' | 'loading' | 'succeeded' | 'failed'
-  statusGetData: "idle", //'idle' | 'failed' | 'success'
-  error: null,
-};
-
 export const fetchCars = createAsyncThunk("cars/fetchCars", async () => {
   try {
     const response = await axios.get(URL);
@@ -33,6 +25,14 @@ export const fetchCars = createAsyncThunk("cars/fetchCars", async () => {
     return error.message;
   }
 });
+
+const initialState = {
+  cars: [],
+  filteredCars: [],
+  status: "idle", //'idle' | 'loading' | 'succeeded' | 'failed'
+  statusGetData: "idle", //'idle' | 'failed' | 'success'
+  error: null,
+};
 
 export const carSlice = createSlice({
   name: "cars",

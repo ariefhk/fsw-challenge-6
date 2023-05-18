@@ -39,7 +39,7 @@ export default function NavbarComponent() {
 
   return (
     <Navbar
-      style={{ padding: "10px 0" }}
+      style={{ padding: "10px 0", zIndex: 3 }}
       expand="lg"
       fixed="top"
       className={colorNav ? styles.nav__colored : styles.nav__transparent}

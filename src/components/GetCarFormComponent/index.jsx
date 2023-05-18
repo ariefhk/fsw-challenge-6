@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchCars, getCarStatus, carSlice } from "../../reducers/carReducer";
+import { themeSlice, getIsSearch } from "../../reducers/themeReducer";
 import { Container, Button } from "react-bootstrap";
 import styles from "./index.module.css";
 import Swal from "sweetalert2";
 
 export default function GetCarFormComponent() {
-  const { filteredCars } = carSlice.actions;
   const dispatch = useDispatch();
+  const { filteredCars } = carSlice.actions;
+  const { searchMode } = themeSlice.actions;
   const loading = useSelector(getCarStatus);
+  const isSearch = useSelector(getIsSearch);
   const [input, setInput] = useState({
     driver: "",
     date: "",
@@ -65,7 +68,9 @@ export default function GetCarFormComponent() {
       <div className="cars-form">
         <form
           id="form-container"
+          style={{ zIndex: isSearch ? 100 : 2 }}
           className={styles.form__container}
+          onClick={() => dispatch(searchMode(true))}
           data-aos="fade-up"
           data-aos-duration="1000"
         >
