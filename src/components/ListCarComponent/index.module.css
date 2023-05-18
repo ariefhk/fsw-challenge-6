@@ -25,6 +25,11 @@
   animation: spin-anim 1.2s linear infinite;
 }
 
+.text__not_found {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
 @keyframes spin-anim {
   0% {
     transform: rotate(0deg);

@@ -40,18 +40,18 @@ export default function GetCarFormComponent() {
     }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = () => {
     const dateTime = new Date(`${input.date} ${input.time}`);
 
     if (!input.date || !input.time || !input.driver) {
       Swal.fire({
         icon: "error",
         scrollbarPadding: false,
-        timer: 1700,
+        timer: 1500,
         title: "Form belum lengkap!",
         text: "Silahkan input semua form.",
       });
+      return;
     }
 
     dispatch(
