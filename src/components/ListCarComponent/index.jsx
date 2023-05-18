@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   getfilteredCars,
   getAllCar,
@@ -7,17 +7,20 @@ import {
   getCarError,
   getSearchStatus,
 } from "../../reducers/carReducer";
+import { themeSlice } from "../../reducers/themeReducer";
 import { Card, Row, Col, Container, Button } from "react-bootstrap";
 import { formatRupiah } from "../../utils/formatRupiah";
 import styles from "./index.module.css";
 import Swal from "sweetalert2";
 
 export default function ListCarComponent() {
+  const dispatch = useDispatch();
   const cars = useSelector(getAllCar);
   const filteredCars = useSelector(getfilteredCars);
   const loading = useSelector(getCarStatus);
   const error = useSelector(getCarError);
   const searchStatus = useSelector(getSearchStatus);
+  const { searchMode } = themeSlice.actions;
   const [data, setData] = useState([]); //for one data handling
 
   //initial first render
@@ -29,6 +32,7 @@ export default function ListCarComponent() {
   useEffect(() => {
     if (searchStatus === "failed") {
       setData([]);
+      dispatch(searchMode(false));
       Swal.fire({
         icon: "error",
         scrollbarPadding: false,
@@ -40,6 +44,7 @@ export default function ListCarComponent() {
     }
     if (searchStatus === "success") {
       setData(filteredCars);
+      dispatch(searchMode(false));
       Swal.fire({
         icon: "success",
         scrollbarPadding: false,
@@ -49,7 +54,7 @@ export default function ListCarComponent() {
       });
       return;
     }
-  }, [filteredCars, searchStatus]);
+  }, [filteredCars, searchStatus, dispatch, searchMode]);
 
   //render UI
   switch (loading) {
