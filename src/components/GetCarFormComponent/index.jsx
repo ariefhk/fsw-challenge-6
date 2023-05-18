@@ -43,7 +43,6 @@ export default function GetCarFormComponent() {
     event.preventDefault();
     const dateTime = new Date(`${input.date} ${input.time}`);
 
-    console.log(input);
     if (!input.date || !input.time || !input.driver) {
       Swal.fire({
         icon: "error",
