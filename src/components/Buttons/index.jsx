@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import styles from "./index.module.css";
+import PropTypes from "prop-types";
 
 export default function Buttons({ children, ...rest }) {
   return (
@@ -9,3 +10,7 @@ export default function Buttons({ children, ...rest }) {
     </Button>
   );
 }
+
+Buttons.propTypes = {
+  children: PropTypes.string,
+};

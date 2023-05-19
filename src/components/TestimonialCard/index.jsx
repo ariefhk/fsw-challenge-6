@@ -1,6 +1,7 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 import styles from "./index.module.css";
+import PropTypes from "prop-types";
 
 export default function TestimonialCard({ image }) {
   return (
@@ -43,3 +44,7 @@ export default function TestimonialCard({ image }) {
     </div>
   );
 }
+
+TestimonialCard.propTypes = {
+  image: PropTypes.string,
+};

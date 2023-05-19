@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Button, Image } from "react-bootstrap";
 import styles from "./index.module.css";
 import { formatRupiah } from "../../utils/formatRupiah";
+import PropTypes from "prop-types";
 
 export default function Cards({
   id,
@@ -61,3 +62,16 @@ export default function Cards({
     </Card>
   );
 }
+
+Cards.propTypes = {
+  id: PropTypes.number,
+  image: PropTypes.string,
+  manufacture: PropTypes.string,
+  model: PropTypes.string,
+  rentPerDay: PropTypes.number,
+  description: PropTypes.string,
+  available: PropTypes.string,
+  transmission: PropTypes.string,
+  year: PropTypes.number,
+  capacity: PropTypes.number,
+};

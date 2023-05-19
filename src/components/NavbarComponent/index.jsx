@@ -62,25 +62,16 @@ export default function NavbarComponent() {
           </Nav.Link>
           <Buttons type="submit">Register</Buttons>
         </Nav>
-        {/* <Navbar.Toggle
+        <Navbar.Toggle
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar2"
           aria-controls="offcanvasNavbar2"
           onClick={handleShow}
-          className={styles.navbar__toggler}
+          className={`navbar-toggler ${styles.navbar__toggler}`}
         >
           <FiMenu className={`navbar-toggler-icon ${styles.nav__icon}`} />
-        </Navbar.Toggle> */}
-        <button
-          className={`navbar-toggler ${styles.navbar__toggler}`}
-          type="button"
-          onClick={handleShow}
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar2"
-          aria-controls="offcanvasNavbar2"
-        >
-          <FiMenu className={`navbar-toggler-icon ${styles.nav__icon} `} />
-        </button>
+        </Navbar.Toggle>
+
         <Offcanvas
           show={show}
           id="offcanvasNavbar2"

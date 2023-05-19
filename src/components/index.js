@@ -8,7 +8,6 @@ import Faq from "./FaqComponent";
 import Footer from "./FooterComponent";
 import GetCarForm from "./GetCarFormComponent";
 import ListCar from "./ListCarComponent";
-import NavbarTest from "./NavbarTest";
 
 export {
   Navbar,
@@ -21,5 +20,4 @@ export {
   Footer,
   GetCarForm,
   ListCar,
-  NavbarTest,
 };

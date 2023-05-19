@@ -62,6 +62,7 @@ export const carSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    // eslint-disable-next-line no-unused-vars
     builder.addCase(fetchCars.pending, (state, action) => {
       state.status = "loading";
     });

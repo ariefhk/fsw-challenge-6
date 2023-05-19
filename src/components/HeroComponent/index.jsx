@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col, Container, Image } from "react-bootstrap";
 import Buttons from "../Buttons";
 import styles from "./index.module.css";
+import PropTypes from "prop-types";
 
 export default function HeroComponent({ isLandingPage }) {
   return (
@@ -46,3 +47,14 @@ export default function HeroComponent({ isLandingPage }) {
     </Container>
   );
 }
+
+HeroComponent.propTypes = {
+  isLandingPage: PropTypes.bool,
+};
+
+// Count.propTypes = {
+//   name: PropTypes.string,
+//   age: PropTypes.number,
+//   address: PropTypes.object,
+//   friends: PropTypes.array,
+// };
