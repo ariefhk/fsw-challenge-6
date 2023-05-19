@@ -101,6 +101,7 @@ export default function ListCarComponent() {
                       src="./images/img-BeepBeep.svg"
                       className={styles.img__not_found}
                       width={260}
+                      alt="https://dribbble.com/shots/5695684-404-Page"
                     />
                     <h3 className={styles.text__not_found}>Car not found!</h3>
                   </Col>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FiMenu } from "react-icons/fi";
+// import { FiMenu } from "react-icons/fi";
 import { Nav, Navbar, Container, Image, Offcanvas } from "react-bootstrap";
 import styles from "./index.module.css";
 import Buttons from "../Buttons";
@@ -57,15 +57,28 @@ export default function NavbarComponent() {
           </Nav.Link>
           <Buttons type="submit">Register</Buttons>
         </Nav>
-        <Navbar.Toggle
+        {/* <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           onClick={handleShow}
           className={styles.navbar__toggle}
         >
           <FiMenu className={`navbar-toggler-icon ${styles.nav__icon}`} />
-        </Navbar.Toggle>
+        </Navbar.Toggle> */}
+        <button
+          className={styles.navbar__toggler}
+          type="button"
+          onClick={handleShow}
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2"
+        >
+          <span className="navbar-toggler-icon">
+            <img src="./images/ic_menu.svg" alt="" srcset="" />
+          </span>
+        </button>
         <Offcanvas
           show={show}
+          tabindex="-1"
           onHide={handleClose}
           style={{ width: "50%" }}
           placement="end"
