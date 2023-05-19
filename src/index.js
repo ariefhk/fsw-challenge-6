@@ -2,15 +2,11 @@ import * as React from "react";
 import ReactDOM from "react-dom/client";
 import { store } from "./store";
 import { Provider } from "react-redux";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import "./utils/reset.css";
 import "./utils/global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LandingPage, GetCarPage, NotFoundPage } from "./pages";
-
-AOS.init();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

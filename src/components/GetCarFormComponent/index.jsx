@@ -70,8 +70,6 @@ export default function GetCarFormComponent() {
           style={{ zIndex: isSearch ? 100 : 2 }}
           className={styles.form__container}
           onClick={() => dispatch(searchMode(true))}
-          data-aos="fade-up"
-          data-aos-duration="1000"
         >
           <div className={styles.form__box}>
             <label htmlFor="driver">Tipe Driver</label>
