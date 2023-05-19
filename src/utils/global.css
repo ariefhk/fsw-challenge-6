@@ -19,12 +19,12 @@ header {
 }
 
 /* handling navbar & offcanvas  start */
-.navbar-toggler .navbar-toggler-icon {
+/* .navbar-toggler .navbar-toggler-icon {
   background: none;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .offcanvas-header .btn-close {
   opacity: 1;

@@ -14,7 +14,7 @@ import {
 export default function LandingPage() {
   return (
     <>
-      <header>
+      <header style={{ backgroundColor: "rgba(241, 243, 255, 1)" }}>
         <Navbar />
         <Hero isLandingPage />
       </header>

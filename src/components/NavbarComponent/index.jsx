@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-// import { FiMenu } from "react-icons/fi";
+import { FiMenu } from "react-icons/fi";
 import { Nav, Navbar, Container, Image, Offcanvas } from "react-bootstrap";
 import styles from "./index.module.css";
 import Buttons from "../Buttons";
 
 export default function NavbarComponent() {
   const [show, setShow] = useState(false);
-  const [colorNav, setColorNav] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleColorNav = () => {
     if (
@@ -14,9 +14,9 @@ export default function NavbarComponent() {
       document.body.scrollTop >= 200 ||
       document.documentElement.scrollTop >= 200
     ) {
-      setColorNav(true);
+      setIsScrolled(true);
     } else {
-      setColorNav(false);
+      setIsScrolled(false);
     }
   };
 
@@ -33,10 +33,15 @@ export default function NavbarComponent() {
 
   return (
     <Navbar
-      style={{ padding: "10px 0", zIndex: 3 }}
+      id="navbar"
+      style={{
+        padding: "10px 0",
+        zIndex: 3,
+      }}
       expand="lg"
-      fixed="top"
-      className={colorNav ? styles.nav__colored : styles.nav__transparent}
+      className={`fixed-top ${
+        isScrolled ? styles.nav__colored : styles.nav__transparent
+      }`}
     >
       <Container className={styles.nav__space}>
         <Navbar.Brand href="/">
@@ -58,27 +63,28 @@ export default function NavbarComponent() {
           <Buttons type="submit">Register</Buttons>
         </Nav>
         {/* <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2"
           onClick={handleShow}
-          className={styles.navbar__toggle}
+          className={styles.navbar__toggler}
         >
           <FiMenu className={`navbar-toggler-icon ${styles.nav__icon}`} />
         </Navbar.Toggle> */}
         <button
-          className={styles.navbar__toggler}
+          className={`navbar-toggler ${styles.navbar__toggler}`}
           type="button"
           onClick={handleShow}
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar2"
           aria-controls="offcanvasNavbar2"
         >
-          <span className="navbar-toggler-icon">
-            <img src="./images/ic_menu.svg" alt="" srcset="" />
-          </span>
+          <FiMenu className={`navbar-toggler-icon ${styles.nav__icon} `} />
         </button>
         <Offcanvas
           show={show}
-          tabindex="-1"
+          id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label"
           onHide={handleClose}
           style={{ width: "50%" }}
           placement="end"

@@ -10,8 +10,6 @@ export default function HeroComponent({ isLandingPage }) {
         <Col
           lg={6}
           className={`d-flex align-item-center px-3 px-sm-0  ${styles.hero__reset}`}
-          data-aos="fade-right"
-          data-aos-duration="1000"
         >
           <div className={styles.hero__text}>
             <h1>
@@ -34,12 +32,7 @@ export default function HeroComponent({ isLandingPage }) {
             )}
           </div>
         </Col>
-        <Col
-          lg={6}
-          className={styles.hero__reset}
-          data-aos="fade-left"
-          data-aos-duration="1000"
-        >
+        <Col lg={6} className={styles.hero__reset}>
           <div className={styles.hero__image}>
             <Image
               src="./images/car.svg"

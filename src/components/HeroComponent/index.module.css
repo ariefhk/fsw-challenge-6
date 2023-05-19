@@ -10,6 +10,7 @@
 .hero {
   margin-top: 54px;
   padding: 37px 20px 0px 14px;
+  background-color: rgba(241, 243, 255, 1);
 }
 
 .hero__btn {
