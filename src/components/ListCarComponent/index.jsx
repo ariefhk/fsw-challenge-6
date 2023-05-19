@@ -23,7 +23,7 @@ export default function ListCarComponent() {
   const { searchMode } = themeSlice.actions;
   const [data, setData] = useState([]); //for one data handling
 
-  //initial first render
+  //initial first render without filter
   useEffect(() => {
     setData(cars);
   }, [cars]);
