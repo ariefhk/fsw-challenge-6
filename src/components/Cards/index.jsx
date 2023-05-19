@@ -5,7 +5,6 @@ import { formatRupiah } from "../../utils/formatRupiah";
 import PropTypes from "prop-types";
 
 export default function Cards({
-  id,
   image,
   manufacture,
   model,
@@ -17,7 +16,7 @@ export default function Cards({
   capacity,
 }) {
   return (
-    <Card key={id} className={styles.card}>
+    <Card className={styles.card}>
       <Card.Img
         variant="top"
         src={image}
@@ -64,13 +63,12 @@ export default function Cards({
 }
 
 Cards.propTypes = {
-  id: PropTypes.number,
   image: PropTypes.string,
   manufacture: PropTypes.string,
   model: PropTypes.string,
   rentPerDay: PropTypes.number,
   description: PropTypes.string,
-  available: PropTypes.string,
+  available: PropTypes.bool,
   transmission: PropTypes.string,
   year: PropTypes.number,
   capacity: PropTypes.number,

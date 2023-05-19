@@ -77,10 +77,9 @@ export default function ListCarComponent() {
         <Container className="pt-5">
           <Row className={`gy-sm-5 gx-sm-5 gy-4 ${styles.card__container}`}>
             {data.length > 0 ? (
-              data.map((car) => (
-                <Col sm={4} key={car.id}>
+              data.map((car, index) => (
+                <Col sm={4} key={index}>
                   <Cards
-                    id={car.id}
                     available={car.available}
                     capacity={car.capacity}
                     description={car.description}
