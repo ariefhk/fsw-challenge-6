@@ -42,7 +42,6 @@ export default function GetCarFormComponent() {
 
   const handleSubmit = () => {
     const dateTime = new Date(`${input.date} ${input.time}`);
-
     if (!input.date || !input.time || !input.driver) {
       Swal.fire({
         icon: "error",
@@ -70,13 +69,13 @@ export default function GetCarFormComponent() {
           id="form-container"
           style={{ zIndex: isSearch ? 100 : 2 }}
           className={styles.form__container}
-          onClick={() => dispatch(searchMode(true))}
         >
           <div className={styles.form__box}>
             <label htmlFor="driver">Tipe Driver</label>
             <div className={styles.form__box__input}>
               <img src="./images/down_input.svg" alt="" srcSet="" />
               <select
+                onClick={() => dispatch(searchMode(true))}
                 value={input.driver}
                 onChange={handleChange}
                 className={styles.form__select}
@@ -101,6 +100,7 @@ export default function GetCarFormComponent() {
             <label htmlFor="date">Tanggal</label>
             <div className={styles.form__box__input}>
               <input
+                onClick={() => dispatch(searchMode(true))}
                 value={input.date}
                 onChange={handleChange}
                 type="date"
@@ -122,6 +122,7 @@ export default function GetCarFormComponent() {
                 id="img-placeholder"
               />
               <select
+                onClick={() => dispatch(searchMode(true))}
                 value={input.time}
                 onChange={handleChange}
                 className={styles.form__select}
@@ -153,6 +154,7 @@ export default function GetCarFormComponent() {
             <div className={styles.form__box__input}>
               <img src="./images/users_input.svg" alt="" srcSet="" />
               <input
+                onClick={() => dispatch(searchMode(true))}
                 name="capacity"
                 value={input.capacity}
                 onChange={handleChange}

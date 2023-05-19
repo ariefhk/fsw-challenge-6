@@ -8,6 +8,10 @@ const URL =
 export const fetchCars = createAsyncThunk("cars/fetchCars", async () => {
   try {
     const response = await axios.get(URL);
+    // Important!
+    // To get all data please filter with days before now (yesteday)
+    // Because we updated days with specifically (hour, minute)
+    // So, it can be changed depends on updated data
     const modifyData = response.data.map((car) => {
       const isPositive = getRandomInt(0, 1) === 1;
       const timeAt = new Date();
