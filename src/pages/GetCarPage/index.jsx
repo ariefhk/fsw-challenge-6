@@ -17,11 +17,11 @@ export default function GetCarPage() {
         onClick={() => dispatch(searchMode(false))}
         className={styles.filter}
       ></div>
-      <header>
+      <header style={{ backgroundColor: "rgba(241, 243, 255, 1)" }}>
         <Navbar />
         <Hero isLandingPage={false} />
       </header>
-      <main>
+      <main style={{ backgroundColor: "#ffff" }}>
         <GetCarForm />
         <ListCar />
       </main>

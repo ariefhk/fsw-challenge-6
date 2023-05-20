@@ -18,7 +18,7 @@ export default function LandingPage() {
         <Navbar />
         <Hero isLandingPage />
       </header>
-      <main>
+      <main style={{ backgroundColor: "#ffff" }}>
         <Service />
         <WhyUs />
         <Testimonial />

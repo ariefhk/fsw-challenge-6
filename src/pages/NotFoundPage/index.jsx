@@ -5,7 +5,7 @@ import styles from "./style.module.css";
 
 export default function NotFoundPage() {
   return (
-    <Container>
+    <Container style={{ backgroundColor: "#ffff" }}>
       <Row
         style={{ height: "100vh" }}
         className="justify-content-center align-items-center"

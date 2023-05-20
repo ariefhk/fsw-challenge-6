@@ -51,10 +51,3 @@ export default function HeroComponent({ isLandingPage }) {
 HeroComponent.propTypes = {
   isLandingPage: PropTypes.bool,
 };
-
-// Count.propTypes = {
-//   name: PropTypes.string,
-//   age: PropTypes.number,
-//   address: PropTypes.object,
-//   friends: PropTypes.array,
-// };
