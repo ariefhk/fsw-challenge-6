@@ -1,14 +1,14 @@
-import { configureStore } from "@reduxjs/toolkit";
-import carReducer from "../reducers/carReducer";
-import themeReducer from "../reducers/themeReducer";
+import { configureStore } from '@reduxjs/toolkit';
+import carSlice from '../slices/carSlice';
+import themeSlice from '../slices/themeSlice';
 
 export const store = configureStore({
-  reducer: {
-    cars: carReducer,
-    themes: themeReducer,
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: false, // warn: fixing seriable check in payload datetime
-    }),
+    reducer: {
+        cars: carSlice,
+        themes: themeSlice,
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: false, // warn: fixing seriable check in payload datetime
+        }),
 });

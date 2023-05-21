@@ -1,16 +1,16 @@
-import React from "react";
-import { Button } from "react-bootstrap";
-import styles from "./index.module.css";
-import PropTypes from "prop-types";
+import { Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import styles from './index.module.css';
 
 export default function Buttons({ children, ...rest }) {
-  return (
-    <Button className={`btn btn-success ${styles.btn}`} {...rest}>
-      {children}
-    </Button>
-  );
+    return (
+        <Button {...rest} className={`btn btn-success ${styles.btn}`}>
+            {children}
+        </Button>
+    );
 }
 
 Buttons.propTypes = {
-  children: PropTypes.string,
+    type: PropTypes.string,
+    children: PropTypes.node,
 };

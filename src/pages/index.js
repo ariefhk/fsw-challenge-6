@@ -1,5 +1,5 @@
-import LandingPage from "./LandingPage";
-import GetCarPage from "./GetCarPage";
-import NotFoundPage from "./NotFoundPage";
+import Home from './Home';
+import GetCar from './GetCar';
+import NotFound from './NotFound';
 
-export { LandingPage, GetCarPage, NotFoundPage };
+export { Home, GetCar, NotFound };
