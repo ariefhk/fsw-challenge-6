@@ -113,10 +113,6 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .btn__success:hover {
     background-color: var(--btn-hover);
 }
-.cars__form,
-.cars__data {
-    margin: 0 64px;
-}
 
 @media (max-width: 576px) {
     .cars__form,
