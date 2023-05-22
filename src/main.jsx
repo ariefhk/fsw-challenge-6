@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
-import './constants/reset.css';
-import './constants/global.css';
+import './styles/reset.css';
+import './styles/global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { store } from './store';
 import { Provider } from 'react-redux';

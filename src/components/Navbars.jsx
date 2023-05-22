@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { FiMenu } from 'react-icons/fi';
 import { Nav, Navbar, Container, Image, Offcanvas } from 'react-bootstrap';
-import styles from './index.module.css';
-import Buttons from '../Buttons';
+import styles from '../styles/Navbars.module.css';
+import Buttons from './Buttons';
 
 export default function Navbars() {
     const [show, setShow] = useState(false);

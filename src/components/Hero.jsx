@@ -1,7 +1,7 @@
 import { Row, Col, Container, Image } from 'react-bootstrap';
-import Buttons from '../Buttons';
+import Buttons from './Buttons';
 import PropTypes from 'prop-types';
-import styles from './index.module.css';
+import styles from '../styles/Hero.module.css';
 
 export default function Hero({ isLandingPage }) {
     return (

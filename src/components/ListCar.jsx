@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import CarCard from '../CarCard';
-import { getfilteredCars, getAllCar, getCarStatus, getCarError, getSearchStatus } from '../../slices/carSlice';
-import { themeSlice } from '../../slices/themeSlice';
+import CarCard from './CarCard';
+import { getfilteredCars, getAllCar, getCarStatus, getCarError, getSearchStatus } from '../slices/carSlice';
+import { themeSlice } from '../slices/themeSlice';
 import { Row, Col, Container, Image } from 'react-bootstrap';
-import styles from './index.module.css';
+import styles from '../styles/ListCar.module.css';
 import Swal from 'sweetalert2';
 
 export default function ListCar() {

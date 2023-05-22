@@ -50,10 +50,6 @@ input[type='number'] {
     -moz-appearance: textfield; /* Firefox */
 }
 
-input[type='date']::-webkit-calendar-picker-indicator {
-    background-image: url('/public/images/calendar_input.svg');
-}
-
 .form__box__input img {
     position: absolute;
     right: 0;
@@ -98,6 +94,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 .btn__search__car {
     visibility: hidden;
+    display: block;
 }
 
 .btn__success {

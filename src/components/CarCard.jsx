@@ -1,7 +1,7 @@
 import { Card, Button, Image } from 'react-bootstrap';
-import styles from './index.module.css';
-import { rupiahFormat } from '../../utils/rupiahFormat';
 import PropTypes from 'prop-types';
+import styles from '../styles/CarCard.module.css';
+import { rupiahFormat } from '../utils/rupiahFormat';
 
 export default function CarCard({ image, manufacture, model, rentPerDay, description, available, transmission, year, capacity }) {
     return (

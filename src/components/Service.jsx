@@ -1,5 +1,5 @@
 import { Row, Col, Container, Image } from 'react-bootstrap';
-import styles from './index.module.css';
+import styles from '../styles/Service.module.css';
 
 export default function Service() {
     return (

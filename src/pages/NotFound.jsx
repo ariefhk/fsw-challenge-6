@@ -1,6 +1,6 @@
-import Buttons from '../../components/Buttons';
+import Buttons from '../components/Buttons';
 import { Container, Col, Image, Row } from 'react-bootstrap';
-import styles from './index.module.css';
+import styles from '../styles/NotFoundPage.module.css';
 
 export default function NotFound() {
     return (

@@ -1,5 +1,5 @@
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
-import styles from './index.module.css';
+import styles from '../styles/Faq.module.css';
 
 export default function Faq() {
     return (

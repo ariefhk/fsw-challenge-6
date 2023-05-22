@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import styles from './index.module.css';
+import styles from '../styles/Buttons.module.css';
 
 export default function Buttons({ children, ...rest }) {
     return (

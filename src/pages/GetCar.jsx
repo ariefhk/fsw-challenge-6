@@ -1,8 +1,7 @@
-import { Footer, Hero, Navbars, Forms, ListCar } from '../../components';
-import { themeSlice, getIsSearch } from '../../slices/themeSlice';
+import { Footer, Hero, Navbars, Forms, ListCar } from '../components';
+import { themeSlice, getIsSearch } from '../slices/themeSlice';
 import { useDispatch, useSelector } from 'react-redux';
-
-import styles from './index.module.css';
+import styles from '../styles/GetCarPage.module.css';
 
 export default function GetCar() {
     const { searchMode } = themeSlice.actions;

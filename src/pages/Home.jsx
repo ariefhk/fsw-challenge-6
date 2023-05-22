@@ -1,4 +1,4 @@
-import { Faq, Footer, Hero, Navbars, Service, Sewa, Testimonial, WhyUs } from '../../components';
+import { Faq, Footer, Hero, Navbars, Service, Sewa, Testimonial, WhyUs } from '../components';
 
 export default function Home() {
     return (

@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
-import Buttons from '../Buttons';
-import styles from './index.module.css';
+import Buttons from './Buttons';
+import styles from '../styles/Sewa.module.css';
 
 export default function Sewa() {
     return (

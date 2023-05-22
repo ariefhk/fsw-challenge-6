@@ -1,8 +1,8 @@
 import { Container } from 'react-bootstrap';
-import TestimonialCard from '../TestimonialCard';
+import TestimonialCard from './TestimonialCard';
 import OwlCarousel from 'react-owl-carousel';
-import '../../constants/owl_carousel.css'; //custom owl carousel style
-import styles from './index.module.css';
+import '../styles/owl_carousel.css'; //custom owl carousel style
+import styles from '../styles/Testimonial.module.css';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 

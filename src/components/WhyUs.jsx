@@ -1,5 +1,5 @@
 import { Row, Col, Card, Image, Container } from 'react-bootstrap';
-import styles from './index.module.css';
+import styles from '../styles/WhyUs.module.css';
 
 export default function WhyUs() {
     return (

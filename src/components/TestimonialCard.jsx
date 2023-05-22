@@ -1,5 +1,5 @@
 import { Image } from 'react-bootstrap';
-import styles from './index.module.css';
+import styles from '../styles/TestimonialCard.module.css';
 import PropTypes from 'prop-types';
 
 export default function TestimonialCard({ image }) {
